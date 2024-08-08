@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;1,600&family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.absolute {
+    position: absolute;
+    top: 50px !important;
+    inset: 0;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.bg-shape1 {
+    width: 400px;
+    height: 400px;
+    border-radius: 9999px;
+    position: relative;
+    animation: one 10s infinite;
+}
+
+.bg-shape2 {
+    width: 300px;
+    height: 300px;
+    border-radius: 9999px;
+    position: relative;
+    animation: two 10s infinite;
+}
+
+@keyframes one{
+    0%{left: 0px; top: 0px;}
+    25%{left: -100px; top: 70px;}
+    50%{left: 20px; top: 150px;}
+    75%{left: 50px; top: 100px;}
+    100%{left: 0px; top: 0px;}
+}
+
+@keyframes two{
+    0%{left: 0px; top: 0px;}
+    25%{left: 50px; top: 10px;}
+    50%{left: 100px; top: 50px;}
+    75%{left: 50px; top: 100px;}
+    100%{left: 0px; top: 0px;}
+}
+
+.opacity-50{
+    opacity: 0.5;
+}
+
+.bg-blur {
+    filter: blur(90px);
+}
+
+.bg-primary {
+    background-color: rgb(30, 0, 255);
+}
+
+.bg-teal {
+    background-color: rgb(255, 72, 173);
+}
+
+.bg-purple {
+    background-color: rgb(140, 0, 215);
+}
+
+// Header section
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .logo {
+    color: #000;
+    font-size: 32px;
+    font-weight: 1000;
+    letter-spacing: 1px;
+    margin: 18px 70px;
+}
+
+.header .logo span {
+    color: hsl(231, 48%, 56%);
+}
+
+.header button{
+    position: relative;
+    margin: 25px 0px;
+    right: 90px;
+    height: 45px;
+    width: 160px;
+    border-radius: 0px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border: 1.7px solid black;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.header button:hover {
+    background: linear-gradient(90deg, #03a9f4, #f441ac, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    color: white;
+    border: none;
+}
+
+.header button:first-child:before {
+    content: '';
+    position: absolute;
+    background: inherit;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border-radius: 0px;
+    filter: blur(20px);
+    opacity: 0.5;
+    transition: opacity 2.5s;
+}
+
+.header button:first-child:hover:before {
+    opacity: 1;
+    z-index: -1;
+}
+
+.header button:hover {
+    z-index: 1;
+    animation: glow 11s linear infinite;
+}
+
+@keyframes glow {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+
+// Hero Section
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-box {
+    position: relative;
+    top: 75px;
+    height: 200px;
+    left: 175px;
+    // text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h2 span {
+    color: hsl(231, 48%, 56%);
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+    margin: 0 0 20px 0;
+}
+
+.hero-box .btn {
+    margin-top: 40px;
+}
+
+.hero-box .btn a {
+    color: black;
+    padding: 14px 50px;
+    border: 1.8px solid black;
+    background: transparent;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+
+.hero-box .btn:hover {
+    transform: translateX(8px);
+    transition: 0.2s ease;
+}
+
+.hero-box .btn i {
+    margin: 5px;
+}
+
+.hero-img {
+    position: relative;
+    width: 545px;
+    height: 455px;
+    right: 0px;
+    top: 30px;
+}
